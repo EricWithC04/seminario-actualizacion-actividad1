@@ -1,25 +1,26 @@
-<h1 id="id">Holis</h1>
+<h1 id="id">Titulo</h1>
 
-<label for="">Nombre: </label>
-<input id="name" type="text"> <br>
-<label id="err">Debes colocar el nombre</label>
+<label for="">Cargue un texto: </label>
+<input id="texto" type="text"> <br>
+<label id="err">cargue algo por favor.</label>
 <button id="btn">Ejecutar</button>
 <script type="text/javascript">
     document.getElementById("id").style.backgroundColor = "blue"
 
-    let name = document.getElementById("name")
+    let text = document.getElementById("texto")
     let err = document.getElementById("err")
 
-    err.style.backgroundColor = "red"
+    err.style.backgroundColor = "yellow"
+    err.style.color = "red"
     err.style.width = "100px"
     err.style.display = "none"
-    
+
     function mensaje() {
-        if (name.value.length === 0) {
+        if (text.value.length === 0) {
             err.style.display = "block"
         } else {
             err.style.display = "none"
-            alert("Hola")
+            alert(text.value)
         }
     }
     
