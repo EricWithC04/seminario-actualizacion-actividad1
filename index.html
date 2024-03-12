@@ -1,0 +1,27 @@
+<h1 id="id">Holis</h1>
+
+<label for="">Nombre: </label>
+<input id="name" type="text"> <br>
+<label id="err">Debes colocar el nombre</label>
+<button id="btn">Ejecutar</button>
+<script type="text/javascript">
+    document.getElementById("id").style.backgroundColor = "blue"
+
+    let name = document.getElementById("name")
+    let err = document.getElementById("err")
+
+    err.style.backgroundColor = "red"
+    err.style.width = "100px"
+    err.style.display = "none"
+    
+    function mensaje() {
+        if (name.value.length === 0) {
+            err.style.display = "block"
+        } else {
+            err.style.display = "none"
+            alert("Hola")
+        }
+    }
+    
+    document.getElementById("btn").addEventListener("click", mensaje)
+</script>
